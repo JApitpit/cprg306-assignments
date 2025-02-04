@@ -8,6 +8,9 @@ export default function HomePage() {
         Go to the <Link href="/week-2">Week 2 Page</Link>
       </p>
       <p>
+        Go to the <Link href="/week-3">Week 3 Page</Link>
+      </p>
+      <p>
         Go to the <Link href="/dogs">Dogs Page</Link>
       </p>
     </main>
