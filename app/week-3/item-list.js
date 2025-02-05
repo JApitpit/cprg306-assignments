@@ -1,6 +1,8 @@
 import Item from './item.js';
 
-const item1 = {
+export default function ItemList() {
+
+  const item1 = {
     name: "milk, 4 L 🥛",
     quantity: 1,
     category: "dairy",
@@ -72,7 +74,6 @@ const item1 = {
     category: "household",
   };
 
-export default function ItemList() {
     return (
         <ul>
             <Item {...item1} />
