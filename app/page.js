@@ -2,20 +2,26 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main>
-      <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <p>
-        Go to the <Link href="/week-2">Week 2 Page</Link>
-      </p>
-      <p>
-        Go to the <Link href="/week-3">Week 3 Page</Link>
-      </p>
-      <p>
-        Go to the <Link href="/week-4">Week 4 Page</Link>
-      </p>
-      <p>
-        Go to the <Link href="/dogs">Dogs Page</Link>
-      </p>
+    <main className="min-h-screen flex flex-col items-center justify-center p-6">
+      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-lg">
+        <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+          CPRG 306: Web Development 2 - Assignments
+        </h1>
+        <nav className="space-y-3">
+          <Link href="/week-2" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
+            Week 2 Page
+          </Link>
+          <Link href="/week-3" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
+            Week 3 Page
+          </Link>
+          <Link href="/week-4" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
+            Week 4 Page
+          </Link>
+          <Link href="/dogs" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
+            Dogs Page
+          </Link>
+        </nav>
+      </div>
     </main>
 
     /*<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">

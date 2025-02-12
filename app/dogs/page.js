@@ -1,4 +1,5 @@
 import Dogs from "./dogs";
+import download from "./images/download.jpg";
 
 export default function Page() 
 {
@@ -12,6 +13,8 @@ export default function Page()
             <Dogs name="Moo Deng" dog="Hippo Dog" img="https://imgs.search.brave.com/mQSMInyn37ipIP2rE3Xh6y28x5h6mvQWOKxM1s04Lys/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubGlmZXN0eWxl/YXNpYS5jb20vd3At/Y29udGVudC91cGxv/YWRzL3NpdGVzLzMv/MjAyNC8wOS8xMzE2/MjMyMC80NTkxMTgw/NjNfNTM5NTk3MTQ1/MjQ3MDQ3Xzg4NTM3/NDAzNTgyODg1OTAz/Mzlfbi01MDB4Mzc1/LmpwZw">
             </Dogs>
             <Dogs name="Scooby" dog="Coward Dog" img="https://imgs.search.brave.com/F3IHrK40pwWuuGHuDTxIdWHyEyQa3QCvnGYOdKCmI1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzhmL2Qx/L2ViLzhmZDFlYjQ0/YjM0YzI2Yjk4YjQz/ZWQwNjgwMWFiNjVj/LmpwZw">
+            </Dogs>
+            <Dogs name="Yman" dog="Good Boy" img={download}>
             </Dogs>
         </div>
     );
