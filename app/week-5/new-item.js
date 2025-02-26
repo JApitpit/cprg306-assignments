@@ -46,7 +46,7 @@ export default function NewItem() {
               -
             </button>
             
-            <span className="text-lg font-medium">{quantity}</span>
+            <span className="text-lg text-black font-medium">{quantity}</span>
   
             <button onClick={increment} disabled={quantity === 20} 
               className="px-3 py-1 bg-green-500 text-white rounded disabled:opacity-50">
