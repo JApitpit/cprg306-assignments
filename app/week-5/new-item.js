@@ -28,7 +28,7 @@ export default function NewItem() {
       <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
         <h2 className="text-2xl text-black font-bold mb-4">Add New Item</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Field */}
+
           <div>
             <label className="block text-black font-semibold">Item Name:</label>
             <input
@@ -40,7 +40,6 @@ export default function NewItem() {
             />
           </div>
   
-          {/* Quantity Field */}
           <div className="flex items-center gap-4">
             <button onClick={decrement} disabled={quantity === 1} 
               className="px-3 py-1 bg-red-500 text-white rounded disabled:opacity-50">
@@ -55,7 +54,6 @@ export default function NewItem() {
             </button>
           </div>
   
-          {/* Category Field */}
           <div>
             <label className="block text-black font-semibold">Category:</label>
             <select
@@ -71,7 +69,6 @@ export default function NewItem() {
             </select>
           </div>
   
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
