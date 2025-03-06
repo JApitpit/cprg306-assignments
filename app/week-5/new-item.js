@@ -36,8 +36,7 @@ export default function NewItem() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full p-2 border text-black rounded-md"
-            />
+              className="w-full p-2 border text-black rounded-md"/>
           </div>
   
           <div className="flex items-center gap-4">
@@ -59,8 +58,7 @@ export default function NewItem() {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full p-2 border text text-black rounded-md"
-            >
+              className="w-full p-2 border text text-black rounded-md">
               {["Produce", "Dairy", "Bakery", "Meat", "Frozen Foods", "Canned Goods", "Dry Goods", "Beverages", "Snacks", "Household", "Other"].map((cat) => (
                 <option key={cat.toLowerCase()} value={cat.toLowerCase()}>
                   {cat}
@@ -69,10 +67,7 @@ export default function NewItem() {
             </select>
           </div>
   
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
-          >
+          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">
             Add Item
           </button>
         </form>
