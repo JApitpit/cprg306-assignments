@@ -1,12 +1,11 @@
 'use client';
 import { useState } from 'react';
 import Item from './item';
-import itemsData from './items.json';
 
-export default function ItemList() {
+export default function ItemList({ items }) {
     const [sortBy, setSortBy] = useState("name");
 
-  const sortedItems = [...itemsData].sort((a, b) => {
+  const sortedItems = [...items].sort((a, b) => {
     if (sortBy === "name") {
       return a.name.localeCompare(b.name);
     } else {
