@@ -18,12 +18,12 @@ export default function ItemList({ items }) {
 
             <div className="flex gap-2 my-4">
                 <button onClick={() => setSortBy('name')}
-                    className={`px-4 py-2 border ${sortBy === 'name' ? 'bg-[#01213f]' : 'bg-[#01213f90]'}`}>
+                    className={`px-4 rounded-lg ${sortBy === 'name' ? 'bg-[#01213f]' : 'bg-[#01213f90]'}`}>
                     Sort by Name
                 </button>
 
                 <button onClick={() => setSortBy('category')}
-                    className={`px-4 py-2 border ${sortBy === 'category' ? 'bg-[#01213f]' : 'bg-[#01213f90]'}`}>
+                    className={`px-4 py-2 rounded-lg  ${sortBy === 'category' ? 'bg-[#01213f]' : 'bg-[#01213f90]'}`}>
                     Sort by Category
                 </button>
             </div>
