@@ -19,13 +19,13 @@ export default function MealIdeas({ ingredient }) {
   }, [ingredient]);
 
   return (
-    <div>
-      <h2>Meal Ideas for {ingredient}</h2>
-      <ul>
+    <div className="p-4 border rounded-lg bg-[#00213e] shadow-md">
+      <h1 className="text-xl text-[#acedcf] text-[30px] font-bold mb-4">Meal Ideas for {ingredient}</h1>
+      <ul className="space-y-4">
         {meals.map((meal) => (
-          <li key={meal.idMeal}>
-            <p>{meal.strMeal}</p>
-            <img src={meal.strMealThumb} alt={meal.strMeal}/>
+          <li key={meal.idMeal} className="flex items-center space-x-4">
+            <img src={meal.strMealThumb} alt={meal.strMeal} width={100} className="rounded-lg" />
+            <p className="text-[#acedcf]">{meal.strMeal}</p>
           </li>
         ))}
       </ul>
