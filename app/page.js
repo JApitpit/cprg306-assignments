@@ -26,6 +26,9 @@ export default function HomePage() {
           <Link href="/week-7" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
             Week 7 Page
           </Link>
+          <Link href="/week-8" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
+            Week 8 Page
+          </Link>
           <Link href="/dogs" className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition">
             Dogs Page
           </Link>
