@@ -1,33 +1,44 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import MealIdeas from './meal-ideas';
 import { useUserAuth } from "../_utils/auth-context";
 import { useRouter } from 'next/navigation';
-import { useEffect } from "react";
-
+import { getItems, addItem } from "../_services/shopping-list-service";
 
 export default function Page() {
-  const [items, setItems] = useState(itemsData);
+  const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState('');
   const { user, firebaseSignOut } = useUserAuth();
   const router = useRouter();
 
-  function handleAddItem(newItem) {
-    setItems((prevItems) => [...prevItems, newItem]);
+  useEffect(() => {
+    if (!user) {
+      router.push("/week-10");
+    } else {
+      loadItems();
+    }
+  }, [user, router]);
+
+  async function loadItems() {
+    if (user) {
+      const userItems = await getItems(user.uid);
+      setItems(userItems);
+    }
+  }
+
+  async function handleAddItem(newItem) {
+    if (user) {
+      const newItemId = await addItem(user.uid, newItem);
+      setItems((prevItems) => [...prevItems, { ...newItem, id: newItemId }]);
+    }
   }
 
   const handleItemSelect = (name) => {
     const cleanedName = name.split(',')[0].trim().replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
     setSelectedItemName(cleanedName);
   };
-
-  useEffect(() => {
-    if (!user) {
-      router.push("/week-9");
-    }
-  }, [user, router]);
 
   if (!user) {
     return null;

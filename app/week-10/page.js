@@ -40,7 +40,7 @@ export default function Page() {
               <h1 className="text-2xl font-bold mb-4">Welcome, {user.displayName}!</h1>
               <p className="mb-4">Email: {user.email}</p>
               <div className="flex gap-4">
-                <Link href="/week-9/shopping-list" className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">
+                <Link href="/week-10/shopping-list" className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">
                   Go to Shopping List
                 </Link>
                 <button
